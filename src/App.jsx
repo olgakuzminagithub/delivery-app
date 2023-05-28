@@ -45,21 +45,21 @@ function App() {
     <div className="container mx-auto min-h-screen">
       <Nav cart={cart}/>
       <Routes>
-        <Route path="/delivery-app" element={<ShopsPage 
+        <Route path="/" element={<ShopsPage 
           cart={cart}
           addToCart={addToCart}
           shopId={shopId}
           shops={shops}
           handleShopChange={handleShopChange}
         />}/>
-        <Route path="/delivery-app/shopping-cart" element={<ShoppingCartPage 
+        <Route path="/shopping-cart" element={<ShoppingCartPage 
           cart={cart}
           shop={shops[shopId].shopName}
           removeFromCart={removeFromCart}
           plusQ={plusQ}
           minusQ={minusQ}
         />}/>
-        <Route path='/delivery-app/order' element={<Order/>}/>
+        <Route path='/order' element={<Order/>}/>
       </Routes>
     </div>
   );

@@ -12,10 +12,10 @@ function Nav({cart}) {
 
   return (
     <nav className='flex'>
-        <NavLink to="/delivery-app" className="text-blue-600 m-10"> 
+        <NavLink to="/" className="text-blue-600 m-10"> 
             Shop
         </NavLink>
-        <NavLink to="/delivery-app/shopping-cart" className="text-blue-600 m-10 relative">
+        <NavLink to="/shopping-cart" className="text-blue-600 m-10 relative">
             Shopping cart 
             <div className={ q > 0 ? classQActiv : classQ}>{q}</div>
         </NavLink>
