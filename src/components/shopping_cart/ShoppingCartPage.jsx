@@ -51,7 +51,7 @@ function handleSubmit () {
     }
     setOrder(newOrder);
     localStorage.setItem('order', JSON.stringify(newOrder))
-    window.location.assign("http://localhost:3000/delivery-app/order/")
+    window.location.assign("/delivery-app/order/")
 }
 
 return (
@@ -77,6 +77,7 @@ return (
         </div>
          <div className='flex justify-end items-center mb-2'>
                 <p className='px-4'>Totla price <b>{sum.toFixed(2)}</b></p>
+                
                 <button disabled={!formValid || cart.length === 0} className='rounded-lg py-2 px-4 bg-green-500 text-white: disabled:bg-gray-300' onClick={() => handleSubmit()}>Submit</button>
         </div>
         <div className='flex justify-end items-center'>
