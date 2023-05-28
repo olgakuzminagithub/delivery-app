@@ -51,7 +51,7 @@ function handleSubmit () {
     }
     setOrder(newOrder);
     localStorage.setItem('order', JSON.stringify(newOrder))
-    window.location.assign("http://localhost:3000/order/")
+    window.location.assign("http://localhost:3000/delivery-app/order/")
 }
 
 return (
