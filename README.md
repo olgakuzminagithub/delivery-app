@@ -1,6 +1,3 @@
-The application can be viewed at the link https://olgakuzminagithub.github.io/
-
-
 #### Requirements
 
 - Node.js
