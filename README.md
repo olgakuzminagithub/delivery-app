@@ -1,20 +1,20 @@
-You can test this app by this link  https://olgakuzminagithub.github.io/delivery-app/
-
-The application implements functions from the basic and middle levels (but data is loaded from an array and new order save to local storage)
-
-To start this app ti you local pc you need:
-
 #### Requirements
 
 - Node.js
 - NPM
 
-javascript
+This project works with remote MongoDB Server.
 
-/* First, Install the needed packages */
-npm install
-
-/* Then start the React app */
-npm start
+To start this app on you local pc you need:
+ - install pm2 on your local PC, please run 
+        npm install pm2 -g
+ - go to backend/ folder and run 
+        npm install
+        pm2 start server.js 
+        Backend is working on localhost:8080
+ - go to frontend/ folder and run 
+        npm install
+        npm start
+        Frontend is working on localchost:3000
 
 
