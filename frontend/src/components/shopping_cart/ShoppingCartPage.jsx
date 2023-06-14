@@ -55,7 +55,7 @@ function handleSubmit () {
         sum: sum
     }
     console.log(newOrder)
-    fetch(`http://localhost:8080/api/orders`, {
+    fetch(`http://localhost:5000/api/orders`, {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(newOrder)

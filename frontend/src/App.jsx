@@ -5,7 +5,7 @@ import ShoppingCartPage from "./components/shopping_cart/ShoppingCartPage";
 import Nav from "./components/common/Nav";
 import Order from './components/common/Order';
 
-const API_URL = "http://localhost:8080/api/shops";
+const API_URL = "http://localhost:5000/api/products";
 
 //function filter by shop
 function filterProducts (products, activShop) {
