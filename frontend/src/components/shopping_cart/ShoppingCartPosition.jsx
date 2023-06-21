@@ -1,20 +1,22 @@
-import React from 'react'
+import React from 'react';
+import IconFastFood from '../common/IconFastFood.jsx';
 
 const ShoppingCartPosition = ({productCart, removeFromCart, plusQ, minusQ}) => {
   return (
-    <div className="relative flex items-center p-6 border-2 border-black rounded-lg mb-2">
-        <div className="w-1/2 h-40 bg-gray-300">
+    <div className="shopping-cart__item">
+        <div className="shopping-cart__img">
+            <IconFastFood/>
         </div>
-        <div className='w-1/2 text-center'>
-            <h3>{productCart.position}</h3>
-            <p>${productCart.price}</p>
-            <div className='flex justify-center'>
-                <span className='border-2 border-black p-1'onClick={() => minusQ(productCart.id)}>-</span>
-                <p className='border-t-2 border-b-2 border-black p-1'>{productCart.qt}</p>
-                <span className='border-2 border-black p-1' onClick={() => plusQ(productCart.id)}>+</span>
+        <div className="shopping-cart__info">
+            <h3 className="shopping-cart__subtitle">{productCart.position}</h3>
+            <p className="shopping-cart__price">${productCart.price}</p>
+            <div className='shopping-cart__quanty'>
+                <span className='shopping-cart__quanty-field' onClick={() => minusQ(productCart._id)}>-</span>
+                <p className='shopping-cart__quanty-field'>{productCart.qt}</p>
+                <span className='shopping-cart__quanty-field' onClick={() => plusQ(productCart._id)}>+</span>
             </div>
         </div>
-        <div className="absolute top-2 right-2 border-2 border-black rounded-full px-2" onClick={() => removeFromCart(productCart.id)}>X</div>
+        <div className="shopping-cart__item-close" onClick={() => removeFromCart(productCart._id)}>X</div>
     </div>
   )
 }

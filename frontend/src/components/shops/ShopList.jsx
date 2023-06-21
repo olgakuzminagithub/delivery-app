@@ -5,7 +5,7 @@ import ShopPosition from './ShopPosition';
 const ShopList = ({menu, addToCart}) => {
 
   return (
-    <div className="w-3/4 p-6 grid gap-4 grid-cols-2 border-2 border-black rounded-lg">
+    <div className="shop__list">
         {menu.map((item, index) => (
             <ShopPosition key={index} item={item} addToCart={addToCart}/>
         ))}

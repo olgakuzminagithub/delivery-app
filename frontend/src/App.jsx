@@ -59,28 +59,28 @@ function App() {
   const addToCart = (productCart) => {
     let isinArray = false;
     cart.forEach(el  => {
-        if (el.id === productCart.id)
+        if (el._id === productCart._id)
          isinArray = true
     })
     if(!isinArray) {
         setCart(p => [...p, productCart])
     } else {
         setCart((cart) =>
-             (cart.map(p => p.id === productCart.id ? {...p, qt: (p.qt + 1)} : p)));
+             (cart.map(p => p._id === productCart._id ? {...p, qt: (p.qt + 1)} : p)));
     }
   };
 
   const plusQ = (id) => {
     setCart((cart) =>
-             (cart.map(p => p.id === id ? {...p, qt: (p.qt + 1)} : p)));
+             (cart.map(p => p._id === id ? {...p, qt: (p.qt + 1)} : p)));
   }
 
   const minusQ = (id) => {
     setCart((cart) =>
-             (cart.map(p => (p.id === id && p.qt > 0) ? {...p, qt: (p.qt - 1)} : p)));
+             (cart.map(p => (p._id === id && p.qt > 0) ? {...p, qt: (p.qt - 1)} : p)));
   }
 
-  const removeFromCart = (id) => setCart((cart) => cart.filter((t) => t.id !== id));
+  const removeFromCart = (id) => setCart((cart) => cart.filter((t) => t._id !== id));
 
 
   return (

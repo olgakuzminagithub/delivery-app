@@ -1,0 +1,280 @@
+$textColor: #148cd4;
+$bgColor: #e2f1fb;
+$btnColor: #81bff4;
+$btnActivColor: #148cd4;
+
+
+.container {
+    padding-top: 30px;
+}
+
+
+.nav {
+    padding: 30px 30px 30px 30px;
+    background-color: $bgColor;
+    border-radius: 10px;
+    display: flex;
+    &__link {
+        color: $textColor;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.shop {
+    padding: 30px 0 30px 0;
+    &__sidebar {
+        padding: 30px 30px 30px 30px;
+        background-color: $bgColor;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    &__list {
+        padding: 30px 30px 30px 30px;
+        background-color: $bgColor;
+        border-radius: 10px;
+    }
+}
+
+.sidebar {
+    &__title {
+        color: $textColor;
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__category {
+        background-color: $btnColor;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        margin-bottom: 10px;
+        &:hover {
+            background-color: $btnActivColor;
+        }
+        &_active {
+            background-color: $btnActivColor;
+        }
+    }
+
+}
+
+.list {
+    &__position {
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        padding: 15px;
+    }
+}
+
+.position {
+    &__img {
+        height: 160px;
+        border-radius: 10px;
+        background-color: white;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            font-size: 100px;
+            color: $bgColor
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        color: $textColor;
+        margin-bottom: 10px;
+    }
+    &__button-fild {
+        display: flex;
+        justify-content: flex-end
+    }
+    &__button {
+        background-color: $btnColor;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        &:hover {
+            background-color: $btnActivColor;
+        }
+    }
+}
+
+.shopping-cart {
+    padding: 30px 0 30px 0;
+    &__leftside {
+        padding: 30px 30px 30px 30px;
+        background-color: $bgColor;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    &__rightside {
+        padding: 30px 30px 30px 30px;
+        background-color: $bgColor;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        label {
+            padding-left: 10px;
+            color: $textColor;
+            margin-bottom: 5px;
+        }
+        input {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__item {
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        padding: 15px;
+        margin-bottom: 30px;
+        position: relative;
+        display: flex;
+    }
+    &__img {
+        width: 50%;
+        height: 160px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            font-size: 100px;
+            color: $bgColor
+        }
+    }
+    &__info {
+        margin: auto;
+        text-align: center;
+    }
+    &__subtitle {
+        color: $textColor;
+    }
+    &__price {
+        color: $textColor;
+        margin-bottom: 10px;
+    }
+    &__quanty {
+        display: flex;
+        justify-content: center;
+    }
+    &__quanty-field {
+        border: 1px solid $textColor;
+        width: 30px;
+        height: 30px;
+        color: $textColor;
+    }
+    &__item-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $btnColor;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: $btnActivColor;
+        }
+    }
+    &__sum-field {
+        padding: 0 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 10px;
+        p {
+            color: $textColor;
+            margin-right: 10px;
+        }
+        button {
+            background-color: $btnColor;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            &:hover {
+                background-color: $btnActivColor;
+            }
+        }
+    }
+    &__error-field {
+        padding: 0 30px;
+        display: flex;
+        justify-content: flex-end;
+        p {
+            font-size: 10px;
+        }
+    }
+}
+
+.nav-quanty {
+    display: none;
+    &_active {
+        position: absolute;
+        top: -15px;
+        right: -30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $btnActivColor;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .shop {
+        display: flex;
+        gap: 30px;
+    }
+    .shop__sidebar {
+        flex: 50%;
+        margin-bottom: 0;
+    }
+    .shop__list {
+        flex: 50%;
+    }
+    .shopping-cart__field {
+        display: flex;
+        gap: 30px;
+    }
+    .shopping-cart__leftside, .shopping-cart__rightside {flex: 45%}
+}
+
+
+@media screen and (min-width: 1200px) {
+    .shop__sidebar {
+        flex: 30%;
+    }
+    .shop__list {
+        flex: 70%;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .list__position {
+        flex: 45% 0;
+    }
+}

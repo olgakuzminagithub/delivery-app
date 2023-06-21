@@ -7,15 +7,15 @@ function Nav({cart}) {
     q += element.qt;
   }); 
 
-  let classQ = "hidden";
-  let classQActiv = "absolute -top-4 -right-8 border-2 border-blue-600 bg-blue-600 rounded-full px-2 text-white";
+  let classQ = "nav-quanty";
+  let classQActiv = "nav-quanty_active";
 
   return (
-    <nav className='flex'>
-        <NavLink to="/delivery-app" className="text-blue-600 m-10"> 
+    <nav className='nav'>
+        <NavLink to="/delivery-app" className="nav__link"> 
             Shop
         </NavLink>
-        <NavLink to="/delivery-app/shopping-cart" className="text-blue-600 m-10 relative">
+        <NavLink to="/delivery-app/shopping-cart" className="nav__link relative">
             Shopping cart 
             <div className={ q > 0 ? classQActiv : classQ}>{q}</div>
         </NavLink>

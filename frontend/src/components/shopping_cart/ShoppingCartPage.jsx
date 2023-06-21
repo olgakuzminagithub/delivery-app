@@ -64,36 +64,36 @@ function handleSubmit () {
  }
 
 return (
-    <div className="p-6 border-2 border-black rounded-lg">
-        <div className='flex gap-4 mb-4'>
-            <div className="w-1/2 p-6 border-2 border-black rounded-lg">
-                <form  className='flex flex-col'>
+    <div className="shopping-cart">
+        <div className="shopping-cart__field">
+            <div className="shopping-cart__leftside">
+                <form  className="shopping-cart__form">
                     <label htmlFor="name">Name</label>
-                    <input onChange={e => nameHandler(e)} value={name} type="text" name="name" id="name" className=' border-2 border-black mb-2'/>
+                    <input onChange={e => nameHandler(e)} value={name} type="text" name="name" id="name"/>
                     <label htmlFor="email">Email</label>
-                    <input onChange={e => emailHandler(e)} value={email} type="email" name="email" id="email" className=' border-2 border-black mb-2' />
+                    <input onChange={e => emailHandler(e)} value={email} type="email" name="email" id="email"/>
                     <label htmlFor="phone">Phone</label>
-                    <input onChange={e => phoneHandler(e)} value={phone} type="tel" name="phone" id="phone" className=' border-2 border-black mb-2' />
+                    <input onChange={e => phoneHandler(e)} value={phone} type="tel" name="phone" id="phone" />
                     <label htmlFor="address">Adress</label>
-                    <input onChange={e => addressHandler(e)} value={address} type="text" name="address" id="address" className=' border-2 border-black mb-2'/>
+                    <input onChange={e => addressHandler(e)} value={address} type="text" name="address" id="address"/>
                 </form>
             </div>
-            <div className="w-1/2 p-6 border-2 border-black rounded-lg max-h-[60vh] overflow-scroll">
+            <div className="shopping-cart__rightside">
                 {cart?.map((productCart, index) => (
                     <ShoppingCartPosition key={index} productCart={productCart} removeFromCart={removeFromCart} plusQ={plusQ} minusQ={minusQ}/>
                 ))}
             </div>
         </div>
-         <div className='flex justify-end items-center mb-2'>
-                <p className='px-4'>Totla price <b>{sum.toFixed(2)}</b></p>
+         <div className='shopping-cart__sum-field'>
+                <p>Totla price <b>{sum.toFixed(2)}</b></p>
                 
-                <button disabled={!formValid || cart.length === 0} className='rounded-lg py-2 px-4 bg-green-500 text-white: disabled:bg-gray-300' onClick={() => handleSubmit()}>Submit</button>
+                <button disabled={!formValid || cart.length === 0} onClick={() => handleSubmit()}>Submit</button>
         </div>
-        <div className='flex justify-end items-center'>
-              <p className='text-[10px]'>{!formValid && error}</p>
+        <div className='shopping-cart__error-field'>
+              <p>{!formValid && error}</p>
         </div>
-        <div className='flex justify-end items-center'>
-              <p className='text-[10px]'>{ cart.length === 0 && 'Cart is empty'}</p>
+        <div className='shopping-cart__error-field'>
+              <p>{ cart.length === 0 && 'Cart is empty'}</p>
         </div>
     </div>
   )
